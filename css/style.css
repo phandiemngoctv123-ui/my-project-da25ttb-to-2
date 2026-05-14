@@ -1,12 +1,11 @@
 body {
     font-family: "Times New Roman", serif;
-    background-color: white;
+    background-color: pink;
 }
 
-.container {
+container {
     width: 920px;
     margin: 5px auto;
-    /*border: 2px solid #666;*/
     background-color: white;
     padding: 5px;
 }
@@ -24,30 +23,27 @@ h2 {
 }
 
 .intro-box {
-    border: 2px solid #999;
+    border: 2px solid black;
     background-color: white;
     padding: 10px;
     display: flex;
     align-items: flex-start;
 }
 
-.avatar {
-    width: 120px;
-    height: 150px;
+img {
+    width: 140px;
+    height: 140px;
     margin-right: 15px;
 }
 
-.intro-content h3 {
+h3 {
     margin-top: 0;
     font-size: 20px;
 }
 
-.intro-content p {
-    font-size: 15px;
-    line-height: 1.5;
 }
 
-.section-title {
+section-title {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 22px;
@@ -78,5 +74,5 @@ ol {
 }
 
 a {
-    color: blue;
+    color:blue;
 }
