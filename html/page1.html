@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-	<title>Trang 1</title>
+	<title>Đăng kí tài khoản</title>
 	<meta charset="utf-8">
+	<link href = "../css/style02.css" rel = "stylesheet">
 </head>
 <body>
-	<h1>Trang số 1</h1>
+	<div class = "container">
+		<form id = "frmLogin">
+			<h2 id = "title">Đăng kí tài khoản</h2>
+			<div class = "from-group">
+				<label for = "txtUsername">Họ tên đăng kí:</label>
+				<input type = "text" id = "txtUsername" name = "txtUsername">
+			</div>
+			<div class = "from-group">
+				<label for = "txtAge">Ngày, tháng, năm sinh:</label>
+				<input type = "date" id = "txtAge" name = "txtAge">
+			</div>
+			<div class = "from-group">
+				<label for = "txtNumber">Số điện thoại:</label>
+				<input type = "tel" id = "txtNumber" name = "txtNumber">
+			</div>
+			<div class = "from-group">
+				<label for = "txtEmail">Email</label>
+				<input type = "email" id = "txtEmail" name = "txtEmail">
+			</div>
+			<div class = "from-group">
+				<label for = "txtplace">Nơi ở</label>
+				<input type = "text" id = "txtplace" name = "txtplace">
+			</div>
+			<div class = "from-group">
+				<label for = "txtPassword">Nhập mật khẩu:</label>
+				<input type = "password" id = "txtPassword" name = "txtPassword">
+			</div>
+			<div class = "from-group">
+				<label for = "txtPassword">Nhập lại mật khẩu:</label>
+				<input type = "password" id = "txtPassword" name = "txtPassword">
+			</div>
+			<input class = "button" type = "submit" name = "sbLogin" id = "sbSignin" value = "Sign in">
+			<input class = "button" type = "reset" name = "rsCancel" id = "rsCancel" value = "Cancel">
+		</form>
 </body>
 </html>
