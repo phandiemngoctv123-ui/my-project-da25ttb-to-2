@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<title>Nhập dữ liệu và hiển thị với prompt và alert</title>
+	<meta charset="utf-8">
+	<!--<link href = "../css/style01.css" rel = "stylesheet">-->
+</head>
+<body>
+	<script>
+		let crong = parseFloat(prompt("Nhập chiều rộng: "));
+		let cdai = parseFloat(prompt("Nhập chiều dài: "));
+		
+		while(crong>cdai)
+		{
+			alert("Chiều rộng không được lớn hơn chiều dài. Vui lòng nhập lại!");
+			crong=parseFloat(prompt("Hãy nhập lại chiều rộng: "));
+		}
+		if(crong === cdai)
+		{
+			dthv = crong * cdai;
+			alert("Diện tích hình vuông là: " + dthv);
+		}
+		if(crong<cdai)
+		{
+			dthcn = crong * cdai;
+			alert("Diện tích hình chữ nhật là: " + dthcn);
+		}
+	</script>
+</body>
+</html>
