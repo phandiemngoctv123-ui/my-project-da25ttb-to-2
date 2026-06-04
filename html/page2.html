@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang ="vi">
 <head>
-	<title>Trang 2</title>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
+	<title>THIẾT KẾ FORM LOGIN</title>
+	<link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
-	<h1>Trang số 2</h1>
+	<div class="container">
+		<form id="frmLogin">
+			<h2 id="title">FORM LOGIN</h2>
+		<div class="form-group">
+			<label for="txtUsername">Username: </label>
+			<input type="text" id="txtUsername" placeholder="Tên đăng nhập..." required>
+		</div>
+		<div class="form-group">
+			<label for="txtPassword">Pass: </label>
+			<input type="password" id="txtPassword" placeholder="Mật khẩu..." required>
+		</div>
+		<input class="button" type="reset" name="rsCancel" id="rsCancel" value="Cancel">
+		<input class="button" type="submit" name="sbLogin" id="sbLogin" value="Login">
+		
+		<p class="switch-form">
+            Bạn chưa có tài khoản? <a href="page1.html">Đăng ký ngay</a>
+        </p>
+		
+		</form>
+	</div>
 </body>
+</head>
 </html>
