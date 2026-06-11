@@ -1,65 +1,129 @@
-/*Mã nguồn javasript*/
+//Khai báo một đối tượng
+const product = {
+    id:"1",
+    name:"Tôm hùm Alaska",
+    price:500000,
+    description:"Siêu ngon",
+    image:"../assets/images/tom1.jpg",
+    link:"chi-tiet.html"
+};
+const products = [
+    {
+    id:"1",
+    name:"Tôm hùm Alaska",
+    price:500000,
+    description:"Siêu ngon",
+    image:"../assets/images/tom1.jpg",
+    link:"chi-tiet.html"
+    },
+
+    {
+    id:"2",
+    name:"Cua hoàng đế",
+    price:3000000,
+    description:"Siêu bổ",
+    image:"../assets/images/cua1.jpg",
+    link:"chi-tiet.html"
+    },
+
+    {
+    id:"3",
+    name:"Cải bắc thảo",
+    price:30000,
+    description:"Siêu sạch",
+    image:"../assets/images/caithao1.jpg",
+    link:"chi-tiet.html"
+    }
+];
+
+
 function inBCC(n)
 {
     let result = "";
-    let i=1;
+    let i = 1;
     while(i<=10)
     {
         result += `${n} x ${i} = ${n*i} <br>`;
         i++;
     }
-    document.getElementById("result").innerHTML= result;
+        document.getElementById("result").innerHTML = result;
 }
 
 function addItem(name, price, description, link, image)
 {
-    //tạo khung chứa container-item
-    const item = document.createElement("div");//<div></div>
-    item.setAttribute("class","container-item");
-    
-    //tạo khung chứa container-image
+    const item = document.createElement("div");
+    item.setAttribute("class", "container-item");
+
     const containerImage = document.createElement("div");
     containerImage.setAttribute("class", "container-image");
 
-    //tạo ảnh
     const imageProduct = document.createElement("img");
-    imageProduct.setAttribute("src", image);//truyền tham số image
+    imageProduct.setAttribute("src", image);
     imageProduct.setAttribute("alt", name);
-    imageProduct.setAttribute("style", "width:100%; max-width:150px;");
+    imageProduct.style.width = "100%";
+    imageProduct.style.maxWidth = "200px";
 
-    //chèn đối tượng vào khung chứa ảnh
     containerImage.appendChild(imageProduct);
 
-    //tạo khung chứa container-info
     const containerInfo = document.createElement("div");
-    containerInfo.setAttribute = ("class", "container-info");
+    containerInfo.setAttribute("class", "container-info");
 
-    //tạo 4 đứa con
-    const nameProduct = document.createElement("p");
+    // Tên sản phẩm
+    const nameProduct = document.createElement("h3");
     nameProduct.innerHTML = name;
 
+    // Giá
     const priceProduct = document.createElement("p");
     priceProduct.innerHTML = price;
 
+    // Mô tả
     const descProduct = document.createElement("p");
     descProduct.innerHTML = description;
 
+    // Link
     const linkProduct = document.createElement("a");
     linkProduct.innerHTML = "Xem chi tiết";
     linkProduct.setAttribute("href", link);
 
-    //thêm con vào khung chứa
     containerInfo.appendChild(nameProduct);
     containerInfo.appendChild(priceProduct);
     containerInfo.appendChild(descProduct);
     containerInfo.appendChild(linkProduct);
 
-    //đưa khung ảnh vào item
     item.appendChild(containerImage);
-
-    //đưa khung info vào item
     item.appendChild(containerInfo);
-   
-    //đưa khung chứa container-product-list vào container
-    document.getElementById("container-product-list").appendChild(item);
+
+    document.getElementById("container-product-list")
+            .appendChild(item);
+}
+
+
+function addItemV2 (obj)
+{
+const list = document.getElementById("product-list") ;
+list.innerHTML +=`
+<div class=" col ">
+    <div class="card product-item" >
+        <div class = "product-image">
+            <img class="card-img-top" src="${obj.image}" alt="${obj.name}">
+        </div><div class="card-body bg-light product-info">
+             <h4 class = "card-title">${obj.name}</h4>
+            <h5 class = "card-text">${obj.price}</h5>
+            <p class = "card-text" >${obj.description}</p>
+            <a class = "btn btn-info" href = "${obj.link}">Xem chi tiết</a>
+         </div>
+    </div>
+</div>
+`;
+}
+
+function loadAllProducts(array)
+{
+    let i = 0;
+
+    while(i < array.length)
+    {
+        addItemV2(array[i]);
+        i++;
+    }
 }

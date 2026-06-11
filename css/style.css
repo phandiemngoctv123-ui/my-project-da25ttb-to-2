@@ -3,11 +3,14 @@ body {
     background-color: pink;
 }
 
-container {
+.container {
     width: 920px;
     margin: 5px auto;
     background-color: white;
     padding: 5px;
+    width: 920px;
+    border: 2px solid #666;
+	align-items:center;
 }
 
 h1 {
@@ -41,7 +44,6 @@ h3 {
     font-size: 20px;
 }
 
-}
 
 section-title {
     margin-top: 20px;
@@ -75,4 +77,8 @@ ol {
 
 a {
     color:blue;
+}
+
+a:hover{
+    color: red;
 }
