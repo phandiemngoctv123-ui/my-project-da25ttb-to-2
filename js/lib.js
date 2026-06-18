@@ -14,7 +14,7 @@ const products = [
     price:500000,
     description:"Siêu ngon",
     image:"../assets/images/tom1.jpg",
-    link:"chi-tiet.html"
+    link:"chi-tiet.html?id=1"
     },
 
     {
@@ -23,7 +23,7 @@ const products = [
     price:3000000,
     description:"Siêu bổ",
     image:"../assets/images/cua1.jpg",
-    link:"chi-tiet.html"
+    link:"chi-tiet.html?id=2"
     },
 
     {
@@ -32,7 +32,7 @@ const products = [
     price:30000,
     description:"Siêu sạch",
     image:"../assets/images/caithao1.jpg",
-    link:"chi-tiet.html"
+    link:"chi-tiet.html?id=3"
     }
 ];
 

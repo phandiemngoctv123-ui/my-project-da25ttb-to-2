@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<title>Thông tin chi tiết</title>
+	<meta charset="utf-8">
+	<link href = "../css/style02.css" rel = "stylesheet">
+	<script src = "../js/lib.js"></script>
+</head>
+<body>
+	<div class = "container">
+		<p><img id="img" src="" alt="Hình ảnh sản phẩm" style="max-width:300px;"></p>
+		<h2 id = "name">Tên sản phẩm</h2>
+		<p>Giá: <span id="price">0</span>đ/kí</p>
+		<div class="product-img-box">
+        
+		</div>
+		<p id = "desc">Mô tả</p>
+	</div>
+	<script>
+        // 1. Khởi tạo đối tượng URLSearchParams để đọc tham số từ thanh địa chỉ
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // 2. Lấy giá trị của tham số 'id'
+        const productId = urlParams.get('id');
+        console.log("ID sản phẩm người dùng muốn xem là: " + productId);
+
+        // 3. Tìm sản phẩm trùng id trong mảng products (Dùng ép kiểu .toString() hoặc '==' để tránh lỗi lệch kiểu dữ liệu)
+        const foundProduct = products.find(item => item.id == productId);
+
+        // 4. Kiểm tra và hiển thị dữ liệu ra giao diện
+        if (foundProduct) 
+        {
+            document.getElementById("name").innerHTML = foundProduct.name;
+            document.getElementById("price").innerHTML = foundProduct.price.toLocaleString();
+            document.getElementById("img").src = foundProduct.image;
+            document.getElementById("desc").innerHTML = foundProduct.description;
+        } 
+        else 
+        {
+            document.getElementById("name").innerHTML = "Không tìm thấy sản phẩm!";
+        }
+    </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-	<title>Cửa hàng hoa</title>
+	<title>Chợ nông sản</title>
 	<meta charset="utf-8">
 	<!-- Latest compiled and minified CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,19 +12,14 @@
 	<script src = "../js/lib.js"></script>
 </head>
 <body>
-	<h2>Chợ nông sản</h2>
+	<h2 class =  "text-center my-4">Chợ nông sản</h2>
 	<div class = "container">
 		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4" id = "product-list">
                 
-            </div>
+        </div>
 	</div>
 	<script>
-    	let i = 0;
-    	while(i<products.length)
-    	{
-        	addItemV2(products[i]);
-       	 i++;
-   		}
+    	loadAllProducts(products);
 	</script>
 </body>
 </html>
